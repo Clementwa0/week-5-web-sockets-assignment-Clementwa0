@@ -14,13 +14,26 @@ const frontend_Url = process.env.frontEnd_Url
 
 const app = express();
 const server = createServer(app);
+const allowedOrigins = [
+  'https://week-5-web-sockets-assignment-cleme.vercel.app',
+  'https://week-5-web-sockets-assignment-cleme.vercel.app/',
+  'http://localhost:5173'
+];
+
+app.use(cors({
+  origin: allowedOrigin,
+  methods: ['GET', 'POST'],
+  credentials: true
+}));
+
 const io = new Server(server, {
   cors: {
-    origin: 'https://week-5-web-sockets-assignment-cleme.vercel.app',  
-    methods: ["GET", "POST"],
+    origin: allowedOrigin,
+    methods: ['GET', 'POST'],
     credentials: true
   }
 });
+
 
 
 app.use(cors());
