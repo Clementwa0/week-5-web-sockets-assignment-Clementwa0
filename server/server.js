@@ -16,7 +16,7 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: frontend_Url,
+    origin: 'https://week-5-web-sockets-assignment-cleme.vercel.app/',
     methods: ["GET", "POST"]
     credentials: true
   }
