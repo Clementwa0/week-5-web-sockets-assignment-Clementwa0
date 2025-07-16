@@ -16,11 +16,12 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: 'https://week-5-web-sockets-assignment-cleme.vercel.app/',
-    methods: ["GET", "POST"]
+    origin: 'https://week-5-web-sockets-assignment-cleme.vercel.app',  
+    methods: ["GET", "POST"],
     credentials: true
   }
 });
+
 
 app.use(cors());
 app.use(express.json());
