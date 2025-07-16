@@ -18,6 +18,7 @@ const io = new Server(server, {
   cors: {
     origin: frontend_Url,
     methods: ["GET", "POST"]
+    credentials: true
   }
 });
 
