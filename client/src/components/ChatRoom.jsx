@@ -39,7 +39,7 @@ const ChatRoom = ({ username, avatar }) => {
     addReaction,
     markAsRead,
     searchMessages
-  } = useSocket(import.meta.env.VITE_SERVER_URL);
+  } = useSocket('https://week-5-web-sockets.onrender.com');
 
   useEffect(() => {
     joinChat(username, avatar);
