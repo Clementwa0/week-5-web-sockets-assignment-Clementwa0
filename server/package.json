@@ -14,12 +14,13 @@
   "packageManager": "pnpm@10.12.1",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
     "express": "^5.1.0",
     "http-server": "^14.1.1",
+    "multer": "^1.x",
     "nodemon": "^3.1.10",
     "socket.io": "^4.8.1",
     "socket.io-client": "^4.8.1",
-    "multer": "^1.x",
     "uuid": "^9.x"
   }
 }

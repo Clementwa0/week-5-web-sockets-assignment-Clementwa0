@@ -38,7 +38,7 @@ const FileUpload = ({ onFileUpload, onClose }) => {
       const formData = new FormData();
       formData.append('file', file);
       
-      const response = await fetch(`${import.meta.env.VITE_SERVER_URL}`, {
+      const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/uploads`, {
         method: 'POST',
         body: formData,
       });

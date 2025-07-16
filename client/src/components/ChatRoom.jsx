@@ -39,7 +39,7 @@ const ChatRoom = ({ username, avatar }) => {
     addReaction,
     markAsRead,
     searchMessages
-  } = useSocket('http://localhost:5000');
+  } = useSocket(import.meta.env.VITE_SERVER_URL);
 
   useEffect(() => {
     joinChat(username, avatar);
